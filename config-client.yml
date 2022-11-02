@@ -1,0 +1,32 @@
+#spring相关配置
+spring:
+  profiles:
+    active: dev
+---
+
+#环境配置
+spring:
+  profiles: dev
+  application:
+    name: springcloud-provider-dept
+
+#eureka的配置,服务注册到哪里
+eureka:
+  client:
+    service-url:
+      #现在服务是往3个集群eureka服务器同时发布
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/
+---
+
+#spring相关配置
+spring:
+  profiles: test
+  application:
+    name: springcloud-provider-dept
+
+#eureka的配置,服务注册到哪里
+eureka:
+  client:
+    service-url:
+      #现在服务是往3个集群eureka服务器同时发布
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/
