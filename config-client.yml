@@ -3,7 +3,8 @@ spring:
   profiles:
     active: dev
 ---
-
+server:
+  port: 8201
 #环境配置
 spring:
   profiles: dev
@@ -17,7 +18,8 @@ eureka:
       #现在服务是往3个集群eureka服务器同时发布
       defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/
 ---
-
+server:
+  port: 8202
 #spring相关配置
 spring:
   profiles: test
